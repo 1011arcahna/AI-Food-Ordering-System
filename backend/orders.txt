@@ -1,0 +1,48 @@
+
+Time: 24/6/2025, 12:54:34 am
+Name: Suman
+Phone: 789654780
+Location: Merrut
+Items: ["Noodles","Paneer Roll","Chocolate Cake"]
+Total: ₹180
+-----------------------------
+
+Time: 24/6/2025, 9:01:05 am
+Name: Abhay
+Phone: 7983553346
+Location: Moradabad
+Items: ["Tea","French Fries","Shamosa"]
+Total: ₹110
+-----------------------------------------------------------
+
+
+Time: 24/6/2025, 10:56:55 am
+Name: Deepa
+Phone: 7986456723
+Location: Moradabad
+Items: ["Burger","Chocolate Cake"]
+Total: ₹140
+-----------------------------------------------------------
+
+Time: 24/6/2025, 10:56:55 am
+Name: Deepa
+Phone: 7986456723
+Location: Moradabad
+Items: ["Burger","Chocolate Cake"]
+Total: ₹140
+-----------------------------------------------------------
+
+Time: 24/6/2025, 10:59:19 am
+Name: Riya
+Phone: 7983553356
+Location: Rampur
+Items: ["Noodles","Chilly Momos"]
+Total: ₹110
+-----------------------------------------------------------
+Time: 24/6/2025, 11:43:12 am
+Name: deepa
+Phone: 4567898765
+Location: dehradun
+Items: Paneer Roll, Burger, Chocolate Cake, Strawberry Ice Cream
+Total: ₹275
+------------------------

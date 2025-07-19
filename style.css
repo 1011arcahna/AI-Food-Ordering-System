@@ -1,0 +1,187 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  background: 
+    linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.9)),
+    url('image/cafe.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #d35400;
+}
+
+/* Section Styling */
+.section {
+  background: rgb(177, 148, 148);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+/* Inputs and Labels */
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+#locationInput {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  width: 100%; /* Full-width button */
+  font-size: 1em;
+  background-color: #f39c12; /* Light Red (Orange-like color) */
+  color: white;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e67e22; /* Darker Red (for hover effect) */
+}
+
+/* Bill Output Section */
+pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+/* Clock Styling */
+#clock {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #e74c3c, #f39c12);
+  padding: 15px 25px;
+  margin: 20px auto;
+  border-radius: 12px;
+  width: max-content;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(243, 156, 18, 0.7);
+  }
+}
+
+/* Spinner for Loading */
+#spinner {
+  display: none;
+  margin-top: 10px;
+  color: green;
+}
+
+/* History Section */
+.history-section ul {
+  padding-left: 20px;
+}
+
+/* Location Input */
+#location {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  button {
+    padding: 16px; 
+    font-size: 1.1em; 
+    width: 100%;  
+  }
+
+  #clock {
+    font-size: 1.1em;
+  }
+
+  #locationInput {
+    padding: 12px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 600px) {
+  #clock {
+    font-size: 1.5em;
+    padding: 10px 20px;
+  }
+
+  h1 {
+    font-size: 1.3em;
+    padding: 10px;
+  }
+
+  #clock {
+    font-size: 1em;
+  }
+  input[type="checkbox"]:checked + label {
+  background-color: #dff0d8;
+  font-weight: bold;
+}
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  #locationInput {
+    padding: 10px;
+  }
+}
+

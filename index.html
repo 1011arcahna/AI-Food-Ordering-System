@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rock Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Rock Cafe</h1>
+  <div id="clock"></div>
+
+  <div class="section">
+    <h2> Ask AI for Food Suggestion</h2>
+    <input type="text" id="mood" placeholder="e.g. I want something spicy" style="width: 100%; padding: 10px;">
+    <button onclick="getSuggestion()">Get Suggestion</button>
+    <div id="spinner">⏳ Thinking...</div>
+    <p id="suggestionOutput"></p>
+    <div id="backendStatus" style="text-align: center; font-weight: bold; color: green; margin-top: 10px;"></div>
+
+  </div>
+
+  <!-- 🍴 MENU FIRST -->
+  <div class="section">
+    <h2>🍴 Menu</h2>
+    <label><input type="checkbox" value="30" data-name="Tea"> Tea - ₹30</label>
+    <label><input type="checkbox" value="35" data-name="Gulab Jamun"> Gulab Jamun - ₹35</label>
+    <label><input type="checkbox" value="40" data-name="French Fries"> French Fries - ₹40</label>
+    <label><input type="checkbox" value="40" data-name="Ras Malai"> Ras Malai - ₹40</label>
+    <label><input type="checkbox" value="40" data-name="Shamosa"> Samosa - ₹40</label>
+    <label><input type="checkbox" value="45" data-name="Cold Coffee"> Cold Coffee - ₹45</label>
+    <label><input type="checkbox" value="50" data-name="Hot Chocolate"> Hot Chocolate - ₹50</label>
+    <label><input type="checkbox" value="50" data-name="Noodles"> Noodles - ₹50</label>
+    <label><input type="checkbox" value="60" data-name="Chilly Momos"> Chilly Momos - ₹60</label>
+    <label><input type="checkbox" value="60" data-name="Paneer Roll"> Paneer Roll - ₹60</label>
+    <label><input type="checkbox" value="70" data-name="Burger"> Burger - ₹70</label>
+    <label><input type="checkbox" value="70" data-name="Chocolate Cake"> Chocolate Cake - ₹70</label>
+    <label><input type="checkbox" value="75" data-name="Strawberry Ice Cream"> Strawberry Ice Cream - ₹75</label>
+    <label><input type="checkbox" value="80" data-name="Ice Cream"> Ice Cream - ₹80</label>
+    <label><input type="checkbox" value="85" data-name="Chocolate Shake"> Chocolate Shake - ₹85</label>
+    <label><input type="checkbox" value="85" data-name="Veg Biryani"> Veg Biryani - ₹85</label>
+    <label><input type="checkbox" value="90" data-name="Brownie Sundae"> Brownie Sundae - ₹90</label>
+    <label><input type="checkbox" value="95" data-name="Spicy Burger"> Spicy Burger - ₹95</label>
+    <label><input type="checkbox" value="100" data-name="Paneer Tikka"> Paneer Tikka - ₹100</label>
+
+    
+    <label for="locationInput">🗺️ Enter your location:</label>
+    <input type="text" id="locationInput" placeholder="Enter your location">
+  </div>
+
+  <!-- 👤 CUSTOMER DETAILS NOW BELOW MENU -->
+  <div class="section">
+    <h2>👤 Customer Details</h2>
+    <label for="customerName">Name:</label>
+    <input type="text" id="customerName" placeholder="Enter your name" style="width: 100%; padding: 10px;">
+    <label for="customerPhone">Phone Number:</label>
+    <input type="text" id="customerPhone" placeholder="Enter your phone number" style="width: 100%; padding: 10px;">
+  </div>
+
+  <div class="section">
+    <h2>🧾 Bill</h2>
+    <button onclick="generateBill()">Generate Bill</button>
+    <pre id="billOutput">No items selected.</pre>
+  </div>
+
+  <p id="thankYouMessage" style="text-align: center; font-size: 1.5em; color: #27ae60; font-weight: bold;"></p>
+
+  <div class="section history-section" id="adminHistorySection" style="display: none;">
+    <h2>📜 Order History</h2>
+    <ul id="orderHistory"></ul>
+    <button onclick="clearHistory()">Clear History</button>
+  </div>
+
+  <div class="section location-section" id="adminLocationSection" style="display: none;">
+    <h2>📍 Location Summary</h2>
+    <ul id="locationSummary"></ul>
+    <button onclick="showPopularLocations()">Show Popular Locations</button>
+  </div>
+
+  <div id="adminPasswordSection" style="display: none; margin-top: 10px;">
+    <input type="password" id="adminPassword" placeholder="Enter admin password" style="padding: 10px; width: 100%; max-width: 300px;">
+    <button onclick="verifyAdminPassword()">Submit</button>
+  </div>
+
+  <button onclick="showPasswordField()">🔐 Admin View</button>
+  <button id="lockAdminBtn" onclick="lockAdmin()" style="display: none;">🔒 Logout Admin</button>
+  
+</body>
+</html>
