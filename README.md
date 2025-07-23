@@ -29,8 +29,9 @@ git clone https://github.com/1011arcahna/AI-Food-Ordering-System.git
 
 
 ##Author
-  Archana Verma
-  GitHub: 1011arcahna
+-Archana Verma
+-Deepa Fartiyal
+
 
 
 
